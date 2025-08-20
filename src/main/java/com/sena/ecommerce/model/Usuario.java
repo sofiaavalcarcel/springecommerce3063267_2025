@@ -17,13 +17,13 @@ public class Usuario {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 
 	private Integer id;
-	private String Nombre;
-	private String Username;
-	private String Email;
-	private String Documento;
-	private String Direccion;
-	private String Telefono;
-	private String Password;
+	private String nombre;
+	private String username;
+	private String email;
+	private String documento;
+	private String direccion;
+	private String telefono;
+	private String password;
 	private String tipo;
 
 	// relaciones DB(database)
@@ -39,19 +39,24 @@ public class Usuario {
 	}
 
 	// metodo constructor con campos
+
 	public Usuario(Integer id, String nombre, String username, String email, String documento, String direccion,
 			String telefono, String password, String tipo) {
 		super();
 		this.id = id;
-		Nombre = nombre;
-		Username = username;
-		Email = email;
-		Documento = documento;
-		Direccion = direccion;
-		Telefono = telefono;
-		Password = password;
+		this.nombre = nombre;
+		this.username = username;
+		this.email = email;
+		this.documento = documento;
+		this.direccion = direccion;
+		this.telefono = telefono;
+		this.password = password;
 		this.tipo = tipo;
 	}
+
+
+	
+	
 
 	public Integer getId() {
 		return id;
@@ -62,59 +67,59 @@ public class Usuario {
 	}
 
 	public String getNombre() {
-		return Nombre;
+		return nombre;
 	}
 
 	public void setNombre(String nombre) {
-		Nombre = nombre;
+		this.nombre = nombre;
 	}
 
 	public String getUsername() {
-		return Username;
+		return username;
 	}
 
 	public void setUsername(String username) {
-		Username = username;
+		this.username = username;
 	}
 
 	public String getEmail() {
-		return Email;
+		return email;
 	}
 
 	public void setEmail(String email) {
-		Email = email;
+		this.email = email;
 	}
 
 	public String getDocumento() {
-		return Documento;
+		return documento;
 	}
 
 	public void setDocumento(String documento) {
-		Documento = documento;
+		this.documento = documento;
 	}
 
 	public String getDireccion() {
-		return Direccion;
+		return direccion;
 	}
 
 	public void setDireccion(String direccion) {
-		Direccion = direccion;
+		this.direccion = direccion;
 	}
 
 	public String getTelefono() {
-		return Telefono;
+		return telefono;
 	}
 
 	public void setTelefono(String telefono) {
-		Telefono = telefono;
+		this.telefono = telefono;
 	}
 
 	public String getPassword() {
-		return Password;
+		return password;
 	}
 
 	public void setPassword(String password) {
-		Password = password;
+		this.password = password;
 	}
 
 	public String getTipo() {
@@ -125,11 +130,28 @@ public class Usuario {
 		this.tipo = tipo;
 	}
 
+	public List<Productos> getProdutos() {
+		return Produtos;
+	}
+
+	public void setProdutos(List<Productos> produtos) {
+		Produtos = produtos;
+	}
+
+	public List<Orden> getOrdenes() {
+		return Ordenes;
+	}
+
+	public void setOrdenes(List<Orden> ordenes) {
+		Ordenes = ordenes;
+	}
+	
+
 	@Override
 	public String toString() {
-		return "Usuario [id=" + id + ", Nombre=" + Nombre + ", Username=" + Username + ", Email=" + Email
-				+ ", Documento=" + Documento + ", Direccion=" + Direccion + ", Telefono=" + Telefono + ", Password="
-				+ Password + ", tipo=" + tipo + "]";
+		return "Usuario [id=" + id + ", nombre=" + nombre + ", username=" + username + ", email=" + email
+				+ ", documento=" + documento + ", direccion=" + direccion + ", telefono=" + telefono + ", password="
+				+ password + ", tipo=" + tipo + ", Produtos=" + Produtos + ", Ordenes=" + Ordenes + "]";
 	}
 
 }
