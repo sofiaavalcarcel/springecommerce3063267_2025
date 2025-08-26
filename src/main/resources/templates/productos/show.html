@@ -53,10 +53,10 @@
 											th:text="${#strings.concat('$', #numbers.formatDecimal(producto.precio, 0, 'POINT', 0, 'POINT'))}">
 										</td>
 										<td> <a title="Editar" class="btn btn-warning"
-												th:href="@{productos/edit/{id} (id=${producto.ID})}"><i
+												th:href="@{productos/edit/{id} (id=${producto.id})}"><i
 													class="bi bi-pencil-square"></i>Editar</a></td>
 										<td><a title="Eliminar" class="btn btn-danger"
-												th:href="@{productos/delete/{id}(id=${producto.ID})}"><i
+												th:href="@{productos/delete/{id}(id=${producto.id})}"><i
 													class="bi bi-file-earmark-x"></i>Eliminar</a></td>
 									</tr>
 								</tbody>

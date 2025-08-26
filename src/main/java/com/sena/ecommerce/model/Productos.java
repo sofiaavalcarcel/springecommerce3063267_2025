@@ -13,7 +13,7 @@ public class Productos {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer ID;
+	private Integer id;
 	private String nombre;
 	private String descripcion;
 	private String imagen;
@@ -30,10 +30,11 @@ public class Productos {
 	}
 
 	// constructor con espacios
-	public Productos(Integer iD, String nombre, String descripcion, String imagen, Double precio, Integer cantidad,
+
+	public Productos(Integer id, String nombre, String descripcion, String imagen, Double precio, Integer cantidad,
 			Usuario usuario) {
 		super();
-		ID = iD;
+		this.id = id;
 		this.nombre = nombre;
 		this.descripcion = descripcion;
 		this.imagen = imagen;
@@ -43,16 +44,17 @@ public class Productos {
 	}
 
 	// getters and setters
-	public Integer getID() {
-		return ID;
-	}
-
-	public void setID(Integer iD) {
-		ID = iD;
-	}
 
 	public String getNombre() {
 		return nombre;
+	}
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
 	}
 
 	public void setNombre(String nombre) {
@@ -102,7 +104,7 @@ public class Productos {
 	// toString
 	@Override
 	public String toString() {
-		return "Productos [ID=" + ID + ", nombre=" + nombre + ", descripcion=" + descripcion + ", imagen=" + imagen
+		return "Productos [ID=" + id + ", nombre=" + nombre + ", descripcion=" + descripcion + ", imagen=" + imagen
 				+ ", precio=" + precio + ", cantidad=" + cantidad + "]";
 	}
 
