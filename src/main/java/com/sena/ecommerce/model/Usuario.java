@@ -7,6 +7,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
+import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 
 //anotaciones jpa
@@ -25,6 +26,8 @@ public class Usuario {
 	private String telefono;
 	private String password;
 	private String tipo;
+	
+	
 
 	// relaciones DB(database)
 	@OneToMany(mappedBy = "usuario")
